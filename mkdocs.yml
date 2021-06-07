@@ -3,19 +3,26 @@ site_url: ''
 use_directory_urls: False
 # repo_url: https://github.com/ionescuig/django-mkdocs.git
 
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/gabriel-ionescu
+    - icon: material/email
+      link: mailto:ionescuig@yahoo.com
+
 markdown_extensions:
   - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 theme:
   name: material
 
 plugins:
   - search
-
-extra:
-  social:
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/gabriel-ionescu
 
 nav:
   - Welcome: index.md
