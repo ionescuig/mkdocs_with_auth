@@ -1,4 +1,4 @@
-# WIP: django-mkdocs
+# WIP: mkdocs_with_auth
 *work in progress...*
 
 This django project will be a step-by-step guide for deploying a **Password Protected Mkdocs Project** to heroku.
