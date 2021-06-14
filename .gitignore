@@ -1,5 +1,6 @@
-# build
-site/
+db.sqlite3
+__pycache__/
+
 
 # virtual environments
 venv/
