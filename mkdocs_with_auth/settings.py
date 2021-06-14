@@ -17,9 +17,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 DOCS_DIR = os.path.join(BASE_DIR, 'static', 'mkdocs_build')
 DOCS_STATIC_NAMESPACE = os.path.basename(DOCS_DIR)
-print('>>> BASE_DIR', BASE_DIR)
-print('>>> DOCS_DIR', DOCS_DIR)
-print('>>> DOCS_STATIC_NAMESPACE:', DOCS_STATIC_NAMESPACE)
 
 
 # Quick-start development settings - unsuitable for production
