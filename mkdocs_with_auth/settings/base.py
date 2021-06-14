@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DOCS_DIR = os.path.join(BASE_DIR, 'static', 'mkdocs_build')
 DOCS_STATIC_NAMESPACE = os.path.basename(DOCS_DIR)
 
@@ -23,10 +23,10 @@ DOCS_STATIC_NAMESPACE = os.path.basename(DOCS_DIR)
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ytr##3#oh@=c(#u*9$fk)@=sq+x4ewevdteck^w4uqla#jr37@'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
