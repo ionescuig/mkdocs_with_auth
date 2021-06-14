@@ -33,3 +33,5 @@ nav:
     - Use markdown: how-to/use-markdown.md
     - Add new documentation page: how-to/add-new-documentation-page.md
     - Create link to a page in the documentation: how-to/create-link-to-a-page-in-the-documentation.md
+  - Logout: accounts/logout/
+  
