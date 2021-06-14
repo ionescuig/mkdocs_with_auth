@@ -1,13 +1,16 @@
 import os
 from django.conf import settings
-from django.contrib.staticfiles.views import serve
-
-
-# Create your views here.
-def serve_index(request):
-    return serve(request, 'mkdocs_build/index.html')
+# from django.contrib.staticfiles.views import serve
+from django.views.static import serve
 
 
 def serve_docs(request, path):
-    path = os.path.join(settings.DOCS_STATIC_NAMESPACE, path)
-    return serve(request, path.replace('\\', '/'))
+    docs_path = os.path.join(settings.DOCS_DIR, path)
+
+    if os.path.isdir(docs_path):
+        path = os.path.join(path, 'index.html')
+
+    path = os.path.join(settings.DOCS_DIR, path)
+    # conver windows path to unix path
+    path = path.replace('\\', '/')
+    return serve(request, path, settings.DOCS_DIR)

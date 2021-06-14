@@ -17,7 +17,9 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 DOCS_DIR = os.path.join(BASE_DIR, 'static', 'mkdocs_build')
 DOCS_STATIC_NAMESPACE = os.path.basename(DOCS_DIR)
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
+print('>>> BASE_DIR', BASE_DIR)
+print('>>> DOCS_DIR', DOCS_DIR)
+print('>>> DOCS_STATIC_NAMESPACE:', DOCS_STATIC_NAMESPACE)
 
 
 # Quick-start development settings - unsuitable for production
@@ -35,6 +37,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'docs',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -127,4 +131,3 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATICFILES_DIRS = [STATIC_DIR, ]

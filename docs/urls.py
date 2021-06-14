@@ -1,9 +1,9 @@
 """docs/url.py"""
-from django.urls import path
+from django.urls import re_path
 
-from .views import serve_docs, serve_index
+from .views import serve_docs
+# from .views import serve_index
 
 urlpatterns = [
-    path('', serve_index),
-    path('<path>', serve_docs),
+    re_path(r'^(?P<path>.*)$', serve_docs),
 ]
