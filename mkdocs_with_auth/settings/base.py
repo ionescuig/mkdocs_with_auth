@@ -15,8 +15,19 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
 DOCS_DIR = os.path.join(BASE_DIR, 'static', 'mkdocs_build')
 DOCS_STATIC_NAMESPACE = os.path.basename(DOCS_DIR)
+
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = 'staticfiles_dir'
+STATIC_DIR = os.path.join(BASE_DIR, 'staticfiles_dir')
+STATICFILES_DIRS = [STATIC_DIR, ]
+
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 
 # Quick-start development settings - unsuitable for production
@@ -59,7 +70,7 @@ ROOT_URLCONF = 'mkdocs_with_auth.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,8 +1,10 @@
 import os
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 from django.views.static import serve
 
 
+@login_required
 def serve_docs(request, path):
     docs_path = os.path.join(settings.DOCS_DIR, path)
 
