@@ -1,4 +1,6 @@
 site_name: Mkdocs Project with User Authentications
+docs_dir: 'mkdocs'
+site_dir: 'static/mkdocs_build'
 site_url: ''
 use_directory_urls: False
 # repo_url: https://github.com/ionescuig/django-mkdocs.git
