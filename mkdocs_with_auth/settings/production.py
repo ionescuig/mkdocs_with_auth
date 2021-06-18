@@ -14,5 +14,5 @@ DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # ---=== STATICFILES ===---
 # at the end of the file
-STATIC_URL = '/staticfiles_dir/'
+STATIC_URL = 'staticfiles_dir'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
