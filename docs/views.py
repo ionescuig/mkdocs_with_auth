@@ -12,9 +12,7 @@ def serve_docs(request, path):
         path = os.path.join(path, 'index.html')
 
     path = os.path.join(settings.DOCS_DIR, path)
-    # conver windows path to unix path
+    # convert windows path to unix path
     path = path.replace('\\', '/')
 
-    if settings.ALLOWED_HOSTS == ['*', ]:
-        return serve(request, path, settings.DOCS_DIR)
-    return serve(request, path)
+    return serve(request, path, settings.DOCS_DIR)
