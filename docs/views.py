@@ -11,7 +11,7 @@ def serve_docs(request, path):
     if os.path.isdir(docs_path):
         path = os.path.join(path, 'index.html')
 
-    path = os.path.join(settings.DOCS_DIR, path)
+    # path = os.path.join(settings.DOCS_DIR, path)
     # convert windows path to unix path
     path = path.replace('\\', '/')
 
