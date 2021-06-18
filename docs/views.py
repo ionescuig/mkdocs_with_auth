@@ -15,5 +15,6 @@ def serve_docs(request, path):
     # conver windows path to unix path
     path = path.replace('\\', '/')
 
-    return serve(request, path, settings.DOCS_DIR)
-
+    if settings.ALLOWED_HOSTS == ['*', ]:
+        return serve(request, path, settings.DOCS_DIR)
+    return serve(request, path)
