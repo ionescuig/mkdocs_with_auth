@@ -21,8 +21,9 @@ DOCS_STATIC_NAMESPACE = os.path.basename(DOCS_DIR)
 
 STATIC_URL = 'staticfiles_dir/'
 STATIC_DIR = os.path.join(BASE_DIR, 'staticfiles_dir')
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+STATICFILES_DIRS = [STATIC_DIR, ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
