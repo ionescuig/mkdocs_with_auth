@@ -23,6 +23,7 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = 'staticfiles_dir'
 STATIC_DIR = os.path.join(BASE_DIR, 'staticfiles_dir')
 STATICFILES_DIRS = [STATIC_DIR, ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
@@ -63,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'mkdocs_with_auth.urls'
