@@ -1,1 +1,1 @@
-web: mkdocs build; gunicorn manager.wsgi
+web: mkdocs build; gunicorn mkdocs_with_auth.wsgi
