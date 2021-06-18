@@ -16,5 +16,4 @@ def serve_docs(request, path):
     path = path.replace('\\', '/')
 
     return serve(request, path, settings.DOCS_DIR)
-    # TODO: should we use if not working with DEBUG=False ?
-    # return serve(request, path, insecure=True)
+
