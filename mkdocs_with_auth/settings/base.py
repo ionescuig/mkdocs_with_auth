@@ -21,6 +21,7 @@ DOCS_STATIC_NAMESPACE = os.path.basename(DOCS_DIR)
 
 STATIC_URL = 'staticfiles_dir/'
 STATIC_DIR = os.path.join(BASE_DIR, 'staticfiles_dir')
+STATIC_ROOT = 'staticfiles/'
 STATICFILES_DIRS = [STATIC_DIR, ]
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
