@@ -19,17 +19,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DOCS_DIR = os.path.join(BASE_DIR, 'static', 'mkdocs_build')
 DOCS_STATIC_NAMESPACE = os.path.basename(DOCS_DIR)
 
-STATIC_ROOT = 'staticfiles/'
 STATIC_URL = 'staticfiles_dir/'
 STATIC_DIR = os.path.join(BASE_DIR, 'staticfiles_dir')
-STATICFILES_DIRS = [STATIC_DIR, ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -141,3 +134,6 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
