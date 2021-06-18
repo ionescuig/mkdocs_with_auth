@@ -14,6 +14,4 @@ DATABASES['default']['CONN_MAX_AGE'] = 500
 # ---=== STATICFILES ===---
 STATIC_URL = 'staticfiles_dir/'
 STATIC_ROOT = 'staticfiles_dir/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'staticfiles_dir'),
-)
+
