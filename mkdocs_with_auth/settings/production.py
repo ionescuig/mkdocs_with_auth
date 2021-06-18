@@ -12,5 +12,5 @@ DATABASES['default'].update(db_from_env)
 DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # ---=== STATICFILES ===---
-STATIC_URL = 'staticfiles_dir'
+STATIC_URL = 'staticfiles_dir/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
