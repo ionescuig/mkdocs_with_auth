@@ -1,7 +1,7 @@
 from .base import *
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['mkdocs-with-auth.herokuapp.com']        # you can add '<custom-domain>.com' in the list
 
