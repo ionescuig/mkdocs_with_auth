@@ -3,7 +3,7 @@ src/plymouthdjango/settings/local.py
 local.py
 local.*
 static/
-staticfiles/
+staticfiles_dir/
 
 db.sqlite3
 __pycache__/
